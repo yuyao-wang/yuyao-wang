@@ -29,16 +29,6 @@ Current areas I’m exploring include:
 - Scientific computing and performance engineering (stiff PDE solvers, CPU–FPGA acceleration)
 - Practical workflow systems that reduce operational friction (OCR + role-based auditing)
 
-## Featured Projects
-
-| Repo (link) | Short description | Primary languages | Key artifacts |
-|---|---|---|---|
-| **[MethaneSphere](https://github.com/yuyao-wang/MethaneSphere)** | Multi-sensor methane emission detection portfolio: dataset pipeline + domain-adaptive ViT concepts | Python | Demo scripts, architecture figures, internal accuracy snapshot; full training/code/data **pre-publication** |
-| **[MSRE-BC-1D](https://github.com/yuyao-wang/MSRE-BC-1D)** | Real-time multiphysics reactor emulation (Python → C++ → FPGA; Vitis HLS) | C++ / Python | Performance table, validation figures, FPGA/CPU co-sim diagrams; manuscript mentioned (submitted) |
-| **[voucher_audit_management_system_OCR](https://github.com/yuyao-wang/voucher_audit_management_system_OCR)** | OCR-enabled, role-based voucher audit workflow system (end-to-end app) | Java / JavaScript | Architecture & workflow diagrams, GUI evidence, run steps, documented test targets |
-| **[property_pledge_appraisement_ML](https://github.com/yuyao-wang/property_pledge_appraisement_ML)** | Bank risk context: collateral valuation from web-crawled housing data + macro features | Jupyter Notebook (Python) | Notebooks, feature docs, saved metric snapshots, visualizations | 
-| **[Snakes](https://github.com/yuyao-wang/Snakes)** | Data-oriented multiplayer snake game (Flecs ECS + ZeroMQ, decoupled client/server) | C++ (CMake) | Screenshot, build/run instructions, CI config; networking plugin design |
-
 ## Project Showcase
 
 <details>
@@ -70,8 +60,6 @@ Methane plumes are sparse and transient; single-sensor revisit limitations creat
   python3 portfolio/demo/emit_bandpass_simulation_demo.py
   python3 portfolio/demo/multidomain_vit_adapter_demo.py
 </details>
-
----
 
 <details>
 <summary><b>MSRE-BC-1D — Real-time multiphysics reactor simulation</b></summary>
@@ -116,8 +104,6 @@ FPGA / Vitis HLS
 System architecture and FPGA co-simulation diagrams are included in the repo.
 
 </details>
-
----
 
 <details>
 <summary><b>Voucher Audit Management System — OCR-based accounting workflow</b></summary>
@@ -171,8 +157,6 @@ The repo includes:
 
 </details>
 
----
-
 <details>
 <summary><b>Property Pledge Appraisement ML — collateral valuation</b></summary>
 
@@ -213,8 +197,6 @@ LightGBM
 Jupyter notebooks
 
 </details>
-
----
 
 <details>
 <summary><b>Snakes — data-oriented multiplayer game</b></summary>
@@ -259,7 +241,6 @@ make
 
 </details>
 
----
 
 ## Tech Stack
 
@@ -268,15 +249,5 @@ make
 **Remote Sensing:** Sentinel-2 · Landsat · Sentinel-5P · GeoTIFF · NetCDF  
 **Systems:** Linux · HPC · Slurm · Git · CMake  
 **Acceleration:** FPGA · Xilinx Vitis HLS
-
----
-
-# Contact
-
-Email  yuyaow42@gmail.com
-
-LinkedIn  https://linkedin.com/in/yuyao-wang
-
-GitHub  https://github.com/yuyao-wang
 
 
