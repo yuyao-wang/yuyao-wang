@@ -242,7 +242,7 @@ make
 </details>
 
 <details>
-<summary><b>Health Sensor Agent Portfolio — Multi-source tool-calling LLM baselines</b></summary>
+<summary><b>LLM Agent — Multi-source tool-calling LLM baselines</b></summary>
 
 **Repo**  
 https://github.com/yuyao-wang/LLM-agent
