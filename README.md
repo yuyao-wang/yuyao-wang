@@ -241,13 +241,58 @@ make
 
 </details>
 
+<details>
+<summary><b>Health Sensor Agent Portfolio — Multi-source tool-calling LLM baselines</b></summary>
+
+**Repo**  
+https://github.com/yuyao-wang/LLM-agent
+
+### Problem
+
+Build a practical health-monitoring agent that can handle **temporal, multi-turn tool-calling** across heterogeneous data sources (CGM + event streams).
+
+### Approach
+
+- Built multi-turn function-calling training mixtures for temporal/event-centric supervision
+- Structured data in ShareGPT-style tool-call format (`function_call` + `observation` + follow-up reasoning)
+- Implemented LoRA/SFT baselines for compact models (Qwen/LLaMA 7B–8B)
+- Tracked reproducible run evidence using logs + config snapshots
+
+### Key results / artifacts
+
+- Representative dataset scales:
+  - `CGM_event_query_train_set`: 3,912
+  - `CGM_time_query_train_set`: 5,053
+  - `CGM_merge_query_train_set`: 8,965
+  - `dialogue_train_merge`: 14,749
+- Baseline run snapshots:
+  - Qwen2.5-7B: train loss `0.1533`, eval loss `0.0605`
+  - Qwen3-8B (mixture A): train loss `0.3902`, eval loss `0.2737`
+  - Qwen3-8B (mixture B): train loss `0.2215`, eval loss `0.0827`
+
+### Tech stack
+
+Python  
+PyTorch  
+LLM Agents / Tool Calling  
+LoRA / SFT  
+Qwen / LLaMA  
+Distributed Multi-GPU Training  
+JSON Data Engineering
+
+### Notes
+
+This repository is presented as a portfolio snapshot of engineering contributions; related paper context is under review.
+
+</details>
 
 ## Tech Stack
 
-**ML & AI:** Python · PyTorch · Vision Transformers · Domain Adaptation · LoRA  
+**ML & AI:** Python · PyTorch · Vision Transformers · Domain Adaptation · LoRA · LLM Agents · Tool Calling · SFT · Qwen · LLaMA  
 **Scientific Computing:** C++ · Numerical PDE Solvers · Performance Optimization  
 **Remote Sensing:** Sentinel-2 · Landsat · Sentinel-5P · GeoTIFF · NetCDF  
-**Systems:** Linux · HPC · Slurm · Git · CMake  
+**Systems:** Linux · HPC · Slurm · Git · CMake · Multi-GPU Training  
 **Acceleration:** FPGA · Xilinx Vitis HLS
+
 
 
