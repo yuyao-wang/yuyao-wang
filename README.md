@@ -1,135 +1,192 @@
 # Yuyao (Phoebe) Wang
 
 ![MSc ECE @ University of Alberta](https://img.shields.io/badge/MSc%20ECE-University%20of%20Alberta-informational)
-![Focus: Earth Observation ML](https://img.shields.io/badge/Focus-Earth%20Observation%20ML-blue)
-![Focus: Scientific Computing](https://img.shields.io/badge/Focus-Scientific%20Computing-blue)
+![Focus: Multimodal ML](https://img.shields.io/badge/Focus-Multimodal%20ML-blue)
+![Focus: Geospatial AI](https://img.shields.io/badge/Focus-Geospatial%20AI-blue)
+![Focus: Applied AI Systems](https://img.shields.io/badge/Focus-Applied%20AI%20Systems-blue)
 ![Python](https://img.shields.io/badge/Code-Python-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/ML-PyTorch-EE4C2C?logo=pytorch&logoColor=white)
 ![C++](https://img.shields.io/badge/Code-C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)
-![FPGA / Vitis HLS](https://img.shields.io/badge/Acceleration-FPGA%20%2F%20Vitis%20HLS-6A1B9A)
 
-**Executive summary:**  
-I’m an MSc ECE researcher building **machine learning systems for Earth observation** and **high-performance scientific simulation tools**. My work often combines **data engineering, modeling, and systems optimization** to make complex models practical for real-world environments.
+**Machine Learning Engineer focused on multimodal ML, geospatial AI, and applied AI systems.**  
+MSc Electrical & Computer Engineering @ University of Alberta.
+
+I build machine learning systems that connect real-world data, model adaptation, and practical engineering workflows — from multi-sensor satellite methane detection to browser-based AI automation and scientific simulation systems.
+
+**Open to:** Machine Learning Engineer · Applied AI Engineer · Software Engineer, ML Systems
 
 **Quick links:**  
-[Email](mailto:yuyaow42@gmail.com) • [LinkedIn](https://linkedin.com/in/yuyao-wang) • [GitHub](https://github.com/yuyao-wang)
+[Email](mailto:yuyaow42@gmail.com) · [LinkedIn](https://linkedin.com/in/yuyao-wang) · [GitHub](https://github.com/yuyao-wang)
 
-**Open to:** Machine Learning Engineer • Applied Scientist • Software Engineer (HPC / ML Systems)
-
+---
 
 ## About Me
 
-My interests lie at the intersection of **machine learning**, **geospatial / remote sensing data engineering**, and **systems performance**.
+My interests lie at the intersection of **machine learning**, **geospatial / remote sensing data engineering**, and **applied AI systems**.
 
-Across my projects, I often encounter a similar challenge: **domain mismatch**. This could appear as cross-sensor differences in satellite imagery, operational constraints in real-world workflows, or hardware limitations when deploying numerical simulations. Much of my work focuses on the engineering required to make models and systems more robust under these shifts.
+Across my projects, I often work with real-world constraints such as incomplete observations, cross-domain mismatch, noisy labels, limited data availability, and deployment-oriented engineering trade-offs. I am especially interested in building ML systems that are not only accurate in controlled settings, but also practical under real data and workflow constraints.
 
-Current areas I’m exploring include:
+Current areas I am exploring include:
 
-- Multi-sensor methane plume detection under domain shifts (remote sensing → domain adaptation)
-- Lightweight adaptation techniques for vision backbones (adapters / LoRA-style modules)
-- Scientific computing and performance engineering (stiff PDE solvers, CPU–FPGA acceleration)
-- Practical workflow systems that reduce operational friction (OCR + role-based auditing)
+- Multimodal ML with incomplete or heterogeneous real-world data
+- Vision Transformer-based modeling, adaptation, and evaluation
+- LLM agents, tool-calling workflows, and applied AI automation
+- Data engineering pipelines for ML experiments and reproducible evaluation
+- Performance-aware implementation with Python, C++, and distributed / HPC workflows
 
-## Project Showcase
+---
+
+## Featured Projects
 
 <details>
-<summary><b>MethaneSphere — Multi-sensor methane detection (portfolio snapshot)</b></summary>
+<summary><b>MethaneFuse — Multi-Sensor Satellite Methane Detection</b></summary>
 
-**Repo:** https://github.com/yuyao-wang/MethaneSphere
+**Repo:**  
+https://github.com/yuyao-wang/MethaneSphere
 
-**Problem**  
-Methane plumes are sparse and transient; single-sensor revisit limitations create a “revisit-time bottleneck”. The goal is to detect plumes more robustly by leveraging multiple satellite domains.
+### Problem
 
-**Approach / Method**  
-- Portfolio documents a multi-sensor pipeline concept (Sentinel-2, Landsat 8/9, Sentinel-5P, plus EMIT-based simulation artifacts).  
-- Uses a ViT-like “universal backbone + sensor-specific adaptation” framing (sensor-as-domain) with lightweight adapter components.
+Methane plume observations are sparse, transient, and sensor-dependent. A single satellite sensor is often limited by revisit time, cloud cover, spatial resolution, spectral coverage, and acquisition quality.
 
-**Key results / artifacts**  
-- Internal comparison snapshot reports improved overall accuracy for “universal + sensor-specific LoRA adapters” vs single-domain baselines (see repo README).  
-- Public-safe demo folder includes two toy scripts:
-  - EMIT-like hyperspectral → multispectral bandpass simulation
-  - Domain-adaptive ViT-style adapter demo (synthetic tensors only)
+This project explores methane plume detection from **partially available multi-sensor satellite observations**, where different events may have different combinations of available sensor data.
 
-**Tech stack**  
-- Python (public-safe demos use NumPy-style tensors)  
-- Full training framework / checkpoints / complete datasets: **unspecified (intentionally withheld pre-publication)**
+### Approach
 
-**How to run / demo**  
-- Demo folder: https://github.com/yuyao-wang/MethaneSphere/tree/main/portfolio/demo  
-- Run:
-  ```bash
-  python3 portfolio/demo/emit_bandpass_simulation_demo.py
-  python3 portfolio/demo/multidomain_vit_adapter_demo.py
+- Built an event-centered multi-sensor learning pipeline using satellite observations from different sensor domains.
+- Developed Vision Transformer-based modeling components for methane plume detection under missing-sensor and cross-sensor conditions.
+- Worked on dataset construction, sensor matching, quality filtering, model evaluation, and research reporting.
+- Designed the project as a public-safe portfolio snapshot while withholding full datasets, checkpoints, and unpublished experimental details.
+
+### Public-safe artifacts
+
+The public repo includes demo components such as:
+
+- EMIT-like hyperspectral to multispectral bandpass simulation
+- Domain-adaptive ViT-style adapter demo using synthetic tensors
+- Portfolio-level documentation of the multi-sensor methane detection workflow
+
+### Tech stack
+
+Python · PyTorch · Vision Transformers · Remote Sensing · Geospatial ML · Domain Adaptation
+
+### Demo
+
+```bash
+python3 portfolio/demo/emit_bandpass_simulation_demo.py
+python3 portfolio/demo/multidomain_vit_adapter_demo.py
+```
+
 </details>
 
-<details>
-<summary><b>MSRE-BC-1D — Real-time multiphysics reactor simulation</b></summary>
+---
 
-**Repo**  
+<details>
+<summary><b>Hanzi Browse — Open-Source Browser Agent Infrastructure</b></summary>
+
+**Repo:**  
+https://github.com/hanzili/hanzi-browse
+
+### Problem
+
+Browser agents need reliable ways to interact with real websites. Generic web automation often fails when websites have complex UI flows, dynamic content, or site-specific interaction patterns.
+
+### Contribution
+
+Contributed to an open-source browser automation project that helps AI agents interact with real websites using site-specific playbooks.
+
+### Work involved
+
+- Contributed to an agent-facing browser automation workflow.
+- Worked with real-world web interaction patterns and product-facing AI tooling.
+- Practiced collaborative open-source development through issue-driven implementation and code review.
+- Gained experience with practical AI agent infrastructure beyond isolated model training.
+
+### Tech stack
+
+JavaScript / TypeScript · Browser Automation · AI Agents · MCP · Open Source
+
+</details>
+
+---
+
+<details>
+<summary><b>MSRE-BC-1D — Real-Time Multiphysics Reactor Simulation</b></summary>
+
+**Repo:**  
 https://github.com/yuyao-wang/MSRE-BC-1D
 
 ### Problem
 
-Molten salt reactor dynamics involve **stiff PDE systems** combining:
+Molten salt reactor dynamics involve stiff and coupled physical processes, including neutron diffusion, delayed neutron kinetics, thermal hydraulics, and heat transfer.
 
-- neutron diffusion
-- delayed neutron kinetics
-- thermal hydraulics
-- heat transfer
-
-These simulations are computationally expensive for real-time analysis.
+These simulations are computationally expensive and difficult to run in real time.
 
 ### Approach
 
-Developed a multi-stage solver pipeline:
+Developed a multi-stage scientific computing workflow:
 
-1. Python prototype for model validation
-2. High-performance C++ solver
-3. Hardware acceleration using **Xilinx Vitis HLS**
+1. Python prototype for model validation and experimentation
+2. C++ implementation for performance-oriented simulation
+3. Hardware-aware implementation exploration using Xilinx Vitis HLS
 
-### Key results
+### Key work
 
-- Achieved **100× speedup** compared with baseline CPU simulation
-- Enabled **real-time reactor emulation**
-- Demonstrated CPU–FPGA co-simulation workflow
+- Built Python and C++ simulation components for coupled neutron diffusion, delayed neutron kinetics, and thermal-hydraulics models.
+- Converted simulation workflows from Python prototypes to C++ implementations for improved performance and hardware-oriented development.
+- Explored CPU–FPGA co-simulation and acceleration-oriented implementation for real-time simulation.
 
 ### Tech stack
 
-C++  
-Python  
-Scientific computing  
-FPGA / Vitis HLS
-
-### Visuals
-
-System architecture and FPGA co-simulation diagrams are included in the repo.
+C++ · Python · Numerical PDEs · Scientific Computing · HPC · Vitis HLS
 
 </details>
 
-<details>
-<summary><b>Voucher Audit Management System — OCR-based accounting workflow</b></summary>
+---
 
-**Repo**  
+## Research and Collaboration Experience
+
+<details>
+<summary><b>LLM Agent — Multi-Source Tool-Calling LLM Baselines</b></summary>
+
+**Repo:**  
+https://github.com/yuyao-wang/LLM-agent
+
+### Context
+
+This repository is presented as a portfolio snapshot of research assistance and experimental engineering work related to temporal, multi-turn LLM agent workflows over heterogeneous data sources.
+
+It is not presented as my independent project.
+
+### Work involved
+
+- Worked with multi-turn tool-calling data formats involving function calls, observations, and follow-up reasoning.
+- Implemented and organized LoRA / SFT baseline experiments for compact LLMs.
+- Prepared reproducible experiment evidence, training configurations, logs, and dataset-scale summaries.
+- Organized data and training artifacts for agent-oriented model evaluation.
+
+### Tech stack
+
+Python · PyTorch · Hugging Face · LoRA / SFT · LLM Agents · Tool Calling · Multi-GPU Training · JSON Data Engineering
+
+</details>
+
+---
+
+## Earlier Projects
+
+<details>
+<summary><b>Voucher Audit Management System — OCR-Based Accounting Workflow</b></summary>
+
+**Repo:**  
 https://github.com/yuyao-wang/voucher_audit_management_system_OCR
 
 ### Problem
 
-Manual accounting voucher validation is repetitive and error-prone.
-
-Auditors must manually:
-
-- read scanned vouchers
-- validate entries
-- record approval workflows
+Manual accounting voucher validation is repetitive and error-prone. Auditors need to read scanned vouchers, validate entries, and record approval workflows.
 
 ### Approach
 
-Designed a **role-based audit workflow system** integrating OCR extraction.
-
-System roles include:
-
-- Auditor
-- Voucher checker
-- Administrator
+Designed a role-based audit workflow system integrating OCR extraction and database-backed document management.
 
 ### Key features
 
@@ -137,162 +194,97 @@ System roles include:
 - Role-based approval workflows
 - Database-backed document storage
 - Web interface for audit operations
+- Architecture diagrams, workflow diagrams, GUI screenshots, and deployment documentation
 
 ### Tech stack
 
-Java  
-Spring Boot  
-Vue  
-MySQL  
-OCR APIs
-
-### Artifacts
-
-The repo includes:
-
-- architecture diagrams
-- workflow diagrams
-- GUI screenshots
-- deployment instructions
+Java · Spring Boot · Vue · MySQL · OCR APIs
 
 </details>
 
-<details>
-<summary><b>Property Pledge Appraisement ML — collateral valuation</b></summary>
+---
 
-**Repo**  
+<details>
+<summary><b>Property Pledge Appraisement ML — Collateral Valuation</b></summary>
+
+**Repo:**  
 https://github.com/yuyao-wang/property_pledge_appraisement_ML
 
 ### Problem
 
-Banks require reliable valuation models for **real-estate collateral risk assessment**.
+Banks require reliable valuation models for real-estate collateral risk assessment.
 
 ### Approach
 
-Constructed a machine learning pipeline using:
+Constructed a machine learning pipeline using structured property data, housing market information, and macroeconomic indicators.
 
-- web-scraped housing market data
-- macroeconomic indicators
-- structured property features
+### Work involved
 
-Explored multiple models:
-
-- Random Forest
-- XGBoost
-- LightGBM
-- CatBoost
-- Ensemble stacking
-
-### Key results
-
-- Compared model performance across multiple ML algorithms
-- Identified important valuation features
+- Built tabular ML pipelines for property valuation.
+- Compared multiple machine learning models, including Random Forest, XGBoost, LightGBM, CatBoost, and ensemble methods.
+- Worked on feature engineering, model evaluation, and finance-oriented risk assessment.
 
 ### Tech stack
 
-Python  
-Scikit-learn  
-XGBoost  
-LightGBM  
-Jupyter notebooks
+Python · Scikit-learn · XGBoost · LightGBM · CatBoost · Jupyter Notebooks
 
 </details>
 
-<details>
-<summary><b>Snakes — data-oriented multiplayer game</b></summary>
+---
 
-**Repo**  
+<details>
+<summary><b>Snakes — Data-Oriented Multiplayer Game</b></summary>
+
+**Repo:**  
 https://github.com/yuyao-wang/Snakes
 
 ### Problem
 
-Explore modern **data-oriented game architecture** using ECS.
+Explore modern data-oriented game architecture using ECS and networked multiplayer design.
 
 ### Approach
 
 Built a multiplayer snake game engine featuring:
 
 - Entity Component System architecture
-- decoupled client-server design
-- network communication via ZeroMQ
-
-### Key features
-
-- modular ECS architecture using Flecs
-- real-time multiplayer synchronization
-- simple graphical rendering with raylib
+- Decoupled client-server design
+- Network communication via ZeroMQ
+- Simple graphical rendering with raylib
 
 ### Tech stack
 
-C++  
-Flecs ECS  
-ZeroMQ  
-raylib  
-CMake
+C++ · Flecs ECS · ZeroMQ · raylib · CMake
 
 ### Run
 
+```bash
 git clone https://github.com/yuyao-wang/Snakes
-
 cd Snakes
 mkdir build && cd build
 cmake ..
 make
+```
 
 </details>
 
-<details>
-<summary><b>LLM Agent — Multi-source tool-calling LLM baselines</b></summary>
+---
 
-**Repo**  
-https://github.com/yuyao-wang/LLM-agent
+## Technical Skills
 
-### Problem
+**Core ML:** Python · PyTorch · Hugging Face Transformers · Vision Transformers · LoRA / SFT · Multimodal Learning · Model Fine-tuning · Model Evaluation
 
-Build a practical health-monitoring agent that can handle **temporal, multi-turn tool-calling** across heterogeneous data sources (CGM + event streams).
+**LLM & Agent Systems:** Tool Calling · Multi-turn Agent Data · Function-calling Workflows · Browser Automation · MCP · JSON Data Pipelines
 
-### Approach
+**Data & Experiment Engineering:** NumPy · Pandas · Jupyter · Dataset Construction · Data Preprocessing · Experiment Logging · Reproducible Training
 
-- Built multi-turn function-calling training mixtures for temporal/event-centric supervision
-- Structured data in ShareGPT-style tool-call format (`function_call` + `observation` + follow-up reasoning)
-- Implemented LoRA/SFT baselines for compact models (Qwen/LLaMA 7B–8B)
-- Tracked reproducible run evidence using logs + config snapshots
+**Software Engineering:** C++ · JavaScript / TypeScript · Java · SQL · Bash · Git · Linux · CMake · Node.js · REST APIs
 
-### Key results / artifacts
+**Geospatial & Scientific Computing:** Satellite Imagery · Multi-sensor Data Processing · GeoTIFF · NetCDF · Google Earth Engine · Slurm / HPC · Vitis HLS
 
-- Representative dataset scales:
-  - `CGM_event_query_train_set`: 3,912
-  - `CGM_time_query_train_set`: 5,053
-  - `CGM_merge_query_train_set`: 8,965
-  - `dialogue_train_merge`: 14,749
-- Baseline run snapshots:
-  - Qwen2.5-7B: train loss `0.1533`, eval loss `0.0605`
-  - Qwen3-8B (mixture A): train loss `0.3902`, eval loss `0.2737`
-  - Qwen3-8B (mixture B): train loss `0.2215`, eval loss `0.0827`
+---
 
-### Tech stack
+## Contact
 
-Python  
-PyTorch  
-LLM Agents / Tool Calling  
-LoRA / SFT  
-Qwen / LLaMA  
-Distributed Multi-GPU Training  
-JSON Data Engineering
+I am interested in applied AI systems, geospatial AI, and research-to-product ML workflows.
 
-### Notes
-
-This repository is presented as a portfolio snapshot of engineering contributions; related paper context is under review.
-
-</details>
-
-## Tech Stack
-
-**ML & AI:** Python · PyTorch · Vision Transformers · Domain Adaptation · LoRA · LLM Agents · Tool Calling · SFT · Qwen · LLaMA  
-**Scientific Computing:** C++ · Numerical PDE Solvers · Performance Optimization  
-**Remote Sensing:** Sentinel-2 · Landsat · Sentinel-5P · GeoTIFF · NetCDF  
-**Systems:** Linux · HPC · Slurm · Git · CMake · Multi-GPU Training  
-**Acceleration:** FPGA · Xilinx Vitis HLS
-
-
-
+Feel free to reach out through [LinkedIn](https://linkedin.com/in/yuyao-wang) or email me at [yuyaow42@gmail.com](mailto:yuyaow42@gmail.com).
