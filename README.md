@@ -42,7 +42,7 @@ Current areas I am exploring include:
 <summary><b>MethaneFuse — Multi-Sensor Satellite Methane Detection</b></summary>
 
 **Repo:**  
-https://github.com/yuyao-wang/MethaneSphere
+https://github.com/yuyao-wang/MethaneFuse
 
 ### Problem
 
