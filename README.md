@@ -2,7 +2,6 @@
 
 ![MSc ECE @ University of Alberta](https://img.shields.io/badge/MSc%20ECE-University%20of%20Alberta-informational)
 ![Focus: Multimodal ML](https://img.shields.io/badge/Focus-Multimodal%20ML-blue)
-![Focus: Geospatial AI](https://img.shields.io/badge/Focus-Geospatial%20AI-blue)
 ![Focus: Applied AI Systems](https://img.shields.io/badge/Focus-Applied%20AI%20Systems-blue)
 ![Python](https://img.shields.io/badge/Code-Python-3776AB?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/ML-PyTorch-EE4C2C?logo=pytorch&logoColor=white)
